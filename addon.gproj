@@ -1,0 +1,8 @@
+GameProject {
+ ID "TacticalFireSupport"
+ GUID "6A5A510A66E0E636"
+ TITLE "Tactical Fire Support"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
