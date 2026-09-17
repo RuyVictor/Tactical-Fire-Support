@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6A67F8C5A1030002}Sounds/Radio/Mission/Radio_Shot_English_English_2.wav"
+ Configurations {
+  WAVResourceClass PC {
+  }
+  WAVResourceClass XBOX_ONE : PC {
+  }
+  WAVResourceClass PS4 : PC {
+  }
+  WAVResourceClass HEADLESS : PC {
+  }
+  WAVResourceClass XBOX_SERIES : PC {
+  }
+  WAVResourceClass PS5 : PC {
+  }
+ }
+}

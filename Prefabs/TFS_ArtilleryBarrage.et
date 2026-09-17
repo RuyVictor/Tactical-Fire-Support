@@ -4,14 +4,19 @@ GenericEntity {
   SCR_EffectsModuleComponent "{6A67F8C2AA91E4C0}" {
    m_EffectConfig SCR_BarrageEffectsModule "{6A67F8C24630B85D}" : "{4BC91B13A08BD11D}Configs/EffectModules/Mortar/MortarBarrage_Small_EffectModule.conf" {
     m_fStartDelay 0
+    m_sModuleEntityPrefab "{6A67F8C4A2400002}Prefabs/TFS_ArtilleryShell_240mm.et"
     m_ModuleZoneData SCR_EffectsModulePositionData_Radius "{5CACED6AD05E7839}" {
-     m_fRadius 80
+     m_fRadius 1
     }
-    m_iMinProjectilesEachBarrage 32
-    m_iMaxProjectilesEachBarrage 32
+    m_iMinProjectilesEachBarrage 1
+    m_iMaxProjectilesEachBarrage 1
+    m_fMinProjectileDelay 0
+    m_fMaxProjectileDelay 0
     m_iBarrageAmount 1
     m_bIsLooping 0
    }
+  }
+  TFS_ArtilleryStrikeLifecycleComponent "{6A67F8C7B2400002}" {
   }
   RplComponent "{6A67F8C2317A56EF}" {
    "Rpl State Override" Runtime

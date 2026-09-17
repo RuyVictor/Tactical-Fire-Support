@@ -1,0 +1,848 @@
+AudioClass {
+ signals {
+  SignalClass {
+   id 45069
+   name "SimpleDistanceBlender2Steps"
+   tl -397.444 156.932
+   res "{E801AB59ABF0E75D}Sounds/_SharedData/Signals/SimpleHelpers/SimpleDistanceBlender2Steps.sig"
+   conns {
+    IOPConnectionClass iopConnection {
+     port 3
+     conn {
+      ConnectionsClass connections {
+       id 8
+       links {
+        ConnectionClass connection {
+         id 46092
+         port 1
+        }
+       }
+      }
+     }
+    }
+   }
+   inputsport {
+    1 3
+   }
+   outputsport {
+    4 7
+   }
+   inputvalues {
+    0 0
+   }
+   inputvaluesmin {
+    0 0
+   }
+   inputvaluesmax {
+    1 1
+   }
+   path "{E801AB59ABF0E75D}Sounds/_SharedData/Signals/SimpleHelpers/SimpleDistanceBlender2Steps.sig"
+  }
+  SignalClass {
+   id 50189
+   name "Weapons_ProjectileTravelnoise_Generic"
+   tl -397.444 -411.444
+   res "{1C1ACCFE550CC28E}Sounds/_SharedData/Signals/Weapons/Weapons_ProjectileTravelnoise_Generic.sig"
+   conns {
+    IOPConnectionClass iopConnection {
+     port 193
+     conn {
+      ConnectionsClass connections {
+       id 8
+       links {
+        ConnectionClass connection {
+         id 52236
+         port 1
+        }
+       }
+      }
+     }
+    }
+    IOPConnectionClass iopConnection {
+     port 198
+     conn {
+      ConnectionsClass connections {
+       id 8
+       links {
+        ConnectionClass connection {
+         id 52236
+         port 2
+        }
+       }
+      }
+     }
+    }
+   }
+   inputsport {
+    34 75 147 153 191 193 198
+   }
+   outputsport {
+    6 44 55 59 60 118 162 173 175 196
+   }
+   inputvalues {
+    155.2 1 120 -0.2 156.9 1 0
+   }
+   inputvaluesmin {
+    -2 0 0 -1 -200 0 0
+   }
+   inputvaluesmax {
+    1000 500 340 1 200 1 1
+   }
+   path "{1C1ACCFE550CC28E}Sounds/_SharedData/Signals/Weapons/Weapons_ProjectileTravelnoise_Generic.sig"
+  }
+ }
+ filters {
+  FilterClass {
+   id 49174
+   name "Distortion"
+   version 5
+   tl 278.785 -572.969
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 175
+      }
+     }
+    }
+   }
+   pi {
+    1 0
+   }
+   pu {
+    1 0
+   }
+   DSPObject DistortionDSPTypeClass dsp {
+    distortionType SoftClipper
+   }
+  }
+ }
+ sounds {
+  SoundClass {
+   id 31753
+   name "TFS_INCOMING_STANDARD"
+   version 5
+   tl 534.227 -284.809
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 55
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 38930
+       port 65
+      }
+      ConnectionClass connection {
+       id 18450
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    51 0
+   }
+   pu {
+    2 0
+   }
+   volume_dB -4
+   outState 21515
+   outStatePort 7175
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass {
+   id 31754
+   name "TFS_INCOMING_EXTENDED"
+   version 5
+   tl 534.227 -134.809
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 55
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 38930
+       port 65
+      }
+      ConnectionClass connection {
+       id 18450
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    51 0
+   }
+   pu {
+    2 0
+   }
+   volume_dB 3
+   outState 21515
+   outStatePort 7175
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass {
+   id 31755
+   name "TFS_INCOMING_EXTREME"
+   version 5
+   tl 534.227 15.191
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 55
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 38930
+       port 65
+      }
+      ConnectionClass connection {
+       id 18450
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    51 0
+   }
+   pu {
+    2 0
+   }
+   volume_dB 8
+   outState 21515
+   outStatePort 7175
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+ }
+ buses {
+  BusClass {
+   id 44039
+   name "FlyByLayer_V"
+   version 7
+   tl 45.889 225.223
+   ctl 0 -21
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 162
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 40964
+       port 65
+      }
+      ConnectionClass connection {
+       id 43012
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    1 0
+   }
+   pu {
+    1 0
+   }
+  }
+ }
+ mixers {
+  MixerClass {
+   id 21515
+   name "FinalMix"
+   version 4
+   tl 816.304 -186.642
+   res "{B764D803219C775E}Sounds/FinalMix.afm"
+   ins {
+    ConnectionsClass connections {
+     id 7175
+     links {
+      ConnectionClass connection {
+       id 31753
+       port 65
+      }
+      ConnectionClass connection {
+       id 31754
+       port 65
+      }
+      ConnectionClass connection {
+       id 31755
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 197639
+     links {
+      ConnectionClass connection {
+       id 32797
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    8388610 0
+   }
+   path "{B764D803219C775E}Sounds/FinalMix.afm"
+   inputs {
+    "WPN_Handling" "WPN_Shots" "WPN_Explosions" "WNP_BulletHits" "CHAR" "ENV_AMB_2D" "VEH_Animations" "Impacts" "Dialogue" "Music" "ENV_Doors" "VEH_Engine" "VEH_Tires" "VON" "SFX" "SFX_Reverb" "VON_Reverb" "Dialogue_Reverb" "Impacts_EXT" "ENV_AMB_3D" "WPN_SonicCracks" "CHAR_Gear" "PA" "SFX_Reverb_Exterior" "UI" "ENV_AMB_3D_Reverb_Exterior" "SFX_Direct" "SFX_Reverb_Small" "SFX_Reverb_Medium" "SFX_Reverb_Large" "WPN_Shots_Player"
+   }
+  }
+ }
+ constants {
+  ConstantClass {
+   id 46092
+   name "Constant 45"
+   version 5
+   tl -599.333 168.932
+   "Constant values" {
+    IOPConstantsValueClass CLOSE_MAX {
+     Key "CLOSE_MAX"
+     Value 1000
+     Port 1
+    }
+   }
+  }
+  ConstantClass {
+   id 52236
+   name "IsMortar"
+   version 5
+   tl -599.333 -294
+   "Constant values" {
+    IOPConstantsValueClass ISMORTAR {
+     Key "ISMORTAR"
+     Value 1
+     Port 1
+    }
+    IOPConstantsValueClass MAX_P_SPEED {
+     Key "MAX_P_SPEED"
+     Value 2809
+     Port 2
+    }
+   }
+  }
+ }
+ shaders {
+  ShaderClass {
+   id 18450
+   name "TRAVELNOISE Base Shader"
+   version 5
+   tl 278.785 -287.832
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 14364
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 1
+     links {
+      ConnectionClass connection {
+       id 17427
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 2
+     links {
+      ConnectionClass connection {
+       id 6165
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 4
+     links {
+      ConnectionClass connection {
+       id 49174
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 33796
+       port 65
+      }
+      ConnectionClass connection {
+       id 8196
+       port 65
+      }
+      ConnectionClass connection {
+       id 2052
+       port 65
+      }
+      ConnectionClass connection {
+       id 45001
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    23 0
+   }
+  }
+  ShaderClass {
+   id 38930
+   name "FlyByLayer Shader"
+   version 5
+   tl 278.785 273.94
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 14364
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 1
+     links {
+      ConnectionClass connection {
+       id 39955
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 2
+     links {
+      ConnectionClass connection {
+       id 6165
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 4
+     links {
+      ConnectionClass connection {
+       id 49174
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 44039
+       port 65
+      }
+     }
+    }
+   }
+   pi {
+    23 0
+   }
+  }
+ }
+ amplitudes {
+  AmplitudeClass {
+   id 17427
+   name "Base Amplitude"
+   version 5
+   tl 278.785 -420.488
+   curve "1/r"
+   innerRange 3
+   outerRange 4000
+   slopeFactor 5
+  }
+  AmplitudeClass {
+   id 39955
+   name "FlyBy Amplitude"
+   version 5
+   tl 278.785 201.212
+   curve "1/r"
+   innerRange 2
+   outerRange 1600
+   slopeFactor 9
+  }
+ }
+ frequency {
+  FrequencyClass {
+   id 6165
+   name "Frequency 9"
+   version 5
+   tl 278.785 -355.719
+   dynamicUpdate 1
+   enableDistanceAtt 1
+  }
+ }
+ banks_local {
+  BankLocalClass {
+   id 45001
+   name "Long Approach LP"
+   version 7
+   tl -188.713 20
+   Volume -11
+   "Volume variance" 1
+   Pitch 0
+   "Pitch variance" 0.15
+   "Loop count" 255
+   "Infinite loop" 1
+   "Termination Fade Out" 500
+   "Random start offset" 0
+   "Fade in time" 1200
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0030001}Sounds/Artillery/Incoming/Whistle/Fire_Whistle_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0030002}Sounds/Artillery/Incoming/Whistle/Fire_Whistle_2.wav"
+     Index 1
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0030003}Sounds/Artillery/Incoming/Whistle/Fire_Whistle_3.wav"
+     Index 2
+    }
+   }
+  }
+  BankLocalClass {
+   id 2052
+   name "Flyby Base Towards LP"
+   version 7
+   tl -188.713 -193.708
+   ctl 0 -21
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 59
+      }
+     }
+    }
+   }
+   pi {
+    3 0
+   }
+   pu {
+    3 0
+   }
+   Volume -8
+   "Volume variance" 1
+   Pitch 0
+   "Pitch variance" 0.2
+   "Loop count" 255
+   "Infinite loop" 1
+   "Termination Fade Out" 400
+   "Random start offset" 1
+   "Fade in time" 800
+   Samples {
+   AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010001}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010002}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_2.wav"
+     Index 1
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010003}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_3.wav"
+     Index 2
+    }
+   }
+  }
+  BankLocalClass {
+   id 8196
+   name "Whine LP"
+   version 7
+   tl -188.713 -98.172
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 118
+      }
+     }
+    }
+   }
+   pi {
+    3 0
+   }
+   pu {
+    3 0
+   }
+   Volume -9
+   "Volume variance" 1
+   Pitch 0
+   "Pitch variance" 0.15
+   "Loop count" 255
+   "Infinite loop" 1
+   "Termination Fade Out" 400
+   "Random start offset" 1
+   "Fade in time" 600
+   Samples {
+   AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0030001}Sounds/Artillery/Incoming/Whistle/Fire_Whistle_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0030002}Sounds/Artillery/Incoming/Whistle/Fire_Whistle_2.wav"
+     Index 1
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0030003}Sounds/Artillery/Incoming/Whistle/Fire_Whistle_3.wav"
+     Index 2
+    }
+   }
+  }
+  BankLocalClass {
+   id 33796
+   name "Flyby Base Away LP"
+   version 7
+   tl -189.963 -302.385
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 60
+      }
+     }
+    }
+   }
+   pi {
+    3 0
+   }
+   pu {
+    3 0
+   }
+   Volume -8
+   "Volume variance" 1
+   Pitch 0
+   "Pitch variance" 0.2
+   "Loop count" 255
+   "Infinite loop" 1
+   "Termination Fade Out" 400
+   "Random start offset" 1
+   "Fade in time" 400
+   Samples {
+   AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010001}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010002}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_2.wav"
+     Index 1
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010003}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_3.wav"
+     Index 2
+    }
+   }
+  }
+  BankLocalClass {
+   id 40964
+   name "FlyByLayer_Close"
+   version 7
+   tl -189.963 156.932
+   ctl 0 -21
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 45069
+       port 4
+      }
+     }
+    }
+   }
+   pi {
+    3 0
+   }
+   pu {
+    3 0
+   }
+   Volume -11
+   "Volume variance" 1
+   Pitch 0
+   "Pitch variance" 0.1
+   "Loop count" 255
+   "Infinite loop" 1
+   "Termination Fade Out" 250
+   "Random start offset" 1
+   "Fade in time" 100
+   Samples {
+   AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0020001}Sounds/Artillery/Incoming/Crack/Fire_Crack_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0020002}Sounds/Artillery/Incoming/Crack/Fire_Crack_2.wav"
+     Index 1
+    }
+   }
+  }
+  BankLocalClass {
+   id 43012
+   name "FlyByLayer_Far"
+   version 7
+   tl -189.963 263.306
+   ctl 0 -21
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 45069
+       port 7
+      }
+     }
+    }
+   }
+   pi {
+    3 0
+   }
+   pu {
+    3 0
+   }
+   Volume -10
+   "Volume variance" 1
+   Pitch 0
+   "Pitch variance" 0.2
+   "Loop count" 255
+   "Infinite loop" 1
+   "Termination Fade Out" 400
+   "Random start offset" 1
+   "Fade in time" 500
+   Samples {
+   AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010001}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010002}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_2.wav"
+     Index 1
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5A0010003}Sounds/Artillery/Incoming/AirRush/Fire_Airrush_3.wav"
+     Index 2
+    }
+   }
+  }
+ }
+ spatialities {
+  SpatialityClass {
+   id 14364
+   name "Spatiality"
+   version 5
+   tl 278.785 -492.592
+   spatialFactor 1
+  }
+ }
+ auxOuts {
+  AuxOutClass {
+   id 32797
+   name "Loop Reverb Aux"
+   version 5
+   tl 816.304 -272.809
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 31753
+       port 5
+      }
+      ConnectionClass connection {
+       id 31754
+       port 5
+      }
+      ConnectionClass connection {
+       id 31755
+       port 5
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 1
+     links {
+      ConnectionClass connection {
+       id 50189
+       port 44
+      }
+     }
+    }
+   }
+   pi {
+    3 0
+   }
+   pu {
+    2 0
+   }
+   OSPort 197639
+  }
+ }
+ groups {
+  GroupClass {
+   id 22531
+   name "Looped Sound"
+   children {
+     17427 37895 6165 16406 31753 5129 18450 8196 15378 13324 14364 20499 10253 26647 24589 25622 27660 30732 33796 35845 48151 49174 2052 53261 54284 45001
+   }
+   parent -1
+   Color 0.503 0 0.376 0.329
+  }
+  GroupClass {
+   id 51203
+   name "\"Close Swoosh\" Layer"
+   children {
+    44039 43012 39955 38930 40964
+   }
+   parent -1
+   Color 0.502 0.376 0 0.329
+  }
+ }
+ version 1
+}

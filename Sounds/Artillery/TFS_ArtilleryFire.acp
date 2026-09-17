@@ -1,0 +1,245 @@
+AudioClass {
+ sounds {
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 241001
+   name "TFS_ARTILLERY_FIRE_STANDARD"
+   version 5
+   tl 500 0
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 241101
+       port 65
+      }
+     }
+    }
+   }
+   volume_dB -2
+   outState 241002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 241003
+   name "TFS_ARTILLERY_FIRE_EXTENDED"
+   version 5
+   tl 500 150
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 241101
+       port 65
+      }
+     }
+    }
+   }
+   volume_dB 5
+   outState 241002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 241004
+   name "TFS_ARTILLERY_FIRE_EXTREME"
+   version 5
+   tl 500 300
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 241101
+       port 65
+      }
+     }
+    }
+   }
+   volume_dB 10
+   outState 241002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+ }
+ mixers {
+  MixerClass {
+   id 241002
+   name "OutputState"
+   version 4
+   tl 750 0
+   res "{B764D803219C775E}Sounds/FinalMix.afm"
+   ins {
+    ConnectionsClass connections {
+     id 8199
+     links {
+      ConnectionClass connection {
+       id 241001
+       port 65
+      }
+      ConnectionClass connection {
+       id 241003
+       port 65
+      }
+      ConnectionClass connection {
+       id 241004
+       port 65
+      }
+     }
+    }
+   }
+   path "{B764D803219C775E}Sounds/FinalMix.afm"
+   inputs {
+    "WPN_Handling" "WPN_Shots" "WPN_Explosions" "WNP_BulletHits" "CHAR" "ENV_AMB_2D" "VEH_Animations" "Impacts" "Dialog" "Music" "ENV_Doors" "VEH_Engine" "VEH_Tires" "VON" "SFX" "SFX_Reverb_OBSOLETE" "VON_Reverb" "Dialog_Reverb" "Impacts_EXT" "ENV_AMB_3D" "WPN_SonicCracks" "CHAR_Gear" "PA" "SFX_Reverb_Exterior" "UI" "ENV_AMB_3D_Reverb_Exterior" "SFX_Direct" "SFX_Reverb_Small" "SFX_Reverb_Medium" "SFX_Reverb_Large" "WPN_Shots_Player" "Dialog_Reverb_Small" "Dialog_Reverb_Medium" "Dialog_Reverb_Large" "WPN_TravelingProjectile" "Dialog_Delay_Exterior" "SFX_Reverb_InCabin"
+   }
+  }
+ }
+ shaders {
+  ShaderClass {
+   id 241101
+   name "Distant Battery Shader"
+   version 5
+   tl 200 0
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 241301
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 1
+     links {
+      ConnectionClass connection {
+       id 241401
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 2
+     links {
+      ConnectionClass connection {
+       id 241501
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+       ConnectionClass connection {
+        id 241601
+        port 65
+       }
+       ConnectionClass connection {
+        id 241603
+        port 65
+      }
+     }
+    }
+   }
+  }
+ }
+ amplitudes {
+  AmplitudeClass {
+   id 241401
+   name "Distant Battery Amplitude"
+   version 5
+   tl -50 0
+   curve Custom
+   AttenuationCurve {
+    CurvePoint "1" {
+     Y 1
+    }
+    CurvePoint "2" {
+     X 500
+     Y 0.65
+    }
+    CurvePoint "3" {
+     X 5000
+     Y 0.35
+    }
+    CurvePoint "4" {
+     X 12000
+    }
+   }
+  }
+ }
+ frequency {
+  FrequencyClass {
+   id 241501
+   name "Distant Battery Frequency"
+   version 5
+   tl -50 100
+   enableDistanceAtt 1
+  }
+ }
+ banks_local {
+  BankLocalClass {
+   id 241601
+   name "Gun Discharge"
+   version 7
+   tl -350 -150
+   Volume -13
+   "Volume variance" 0.75
+   Pitch -1
+   "Pitch variance" 0.5
+   Resampler FIR_4
+   Samples {
+     AudioBankSampleClass Sample {
+      Filename "{6A67F8C5F0010001}Sounds/Artillery/Fire/Shoot/Fire_Shoot_1.wav"
+     }
+     AudioBankSampleClass Sample {
+      Filename "{6A67F8C5F0010002}Sounds/Artillery/Fire/Shoot/Fire_Shoot_2.wav"
+      Index 1
+     }
+    }
+  }
+  BankLocalClass {
+   id 241603
+   name "Gun Tail"
+   version 7
+   tl -350 150
+   Volume -16
+   "Volume variance" 1
+   Pitch -1
+   "Pitch variance" 0.7
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5F0020001}Sounds/Artillery/Fire/Tail/Fire_Tail_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5F0020002}Sounds/Artillery/Fire/Tail/Fire_Tail_2.wav"
+     Index 1
+    }
+   }
+  }
+ }
+ spatialities {
+  SpatialityClass {
+   id 241301
+   name "Distant Battery Spatiality"
+   version 5
+   tl -50 -100
+   spatialFactor 1
+  }
+ }
+ version 1
+ sourcesLimit 4
+}

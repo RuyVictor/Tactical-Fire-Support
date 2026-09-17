@@ -1,0 +1,31 @@
+Projectile : "{8AEB3E3846780747}Prefabs/Weapons/Ammo/Ammo_Shell_81mm_HE_M821_EffectModule.et" {
+ ID "5098E3DEA78F878B"
+ scale 2.963
+ components {
+  SCR_ShellSoundComponent "{60C8EAEE6F7B13A8}" {
+   Filenames {
+    "{6A67F8C6A2400001}Sounds/Artillery/TFS_ArtilleryIncoming.acp"
+   }
+  }
+  CollisionTriggerComponent "{60AC9441243E3504}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{66448E9CBD7626AB}" {
+     EffectPrefab "{6A67F8C4A2400001}Prefabs/TFS_Warhead_240mm_HE.et"
+     SoundEvent ""
+    }
+   }
+  }
+  RigidBody "{60AC9440016FD3D4}" {
+   Mass 130.84
+  }
+  ShellMoveComponent "{5098E3DEA78F87A3}" {
+   SonicCracks ""
+   SubsonicFlybys ""
+   Mass 130.84
+   Diameter 240
+   Length 1565
+  }
+  TFS_ArtilleryAudioProfileComponent "{6A67F8C7A2400001}" {
+  }
+ }
+}

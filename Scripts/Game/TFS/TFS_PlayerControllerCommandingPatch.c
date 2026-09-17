@@ -30,8 +30,8 @@ modded class SCR_PlayerControllerCommandingComponent
 
 		SCR_MapMenuCommandingEntry supportEntry = new SCR_MapMenuCommandingEntry(TFS_ArtillerySupportCommand.COMMAND_NAME);
 		supportEntry.SetId(TFS_ArtillerySupportCommand.COMMAND_NAME);
-		supportEntry.SetName("Apoio de artilharia");
-		supportEntry.SetDescription("Solicitar uma salva de morteiro neste ponto.");
+		supportEntry.SetName("Artilharia 240 mm");
+		supportEntry.SetDescription("Solicitar um disparo pesado de 240 mm neste ponto.");
 		supportEntry.SetIcon(
 			"{A37CF52DBA874559}UI/Imagesets/WeaponInfo/WeaponInfo_Ammo.imageset",
 			"ammotype-HE"

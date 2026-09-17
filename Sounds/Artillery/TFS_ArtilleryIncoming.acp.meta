@@ -1,0 +1,9 @@
+MetaFileClass {
+ Name "{6A67F8C6A2400001}Sounds/Artillery/TFS_ArtilleryIncoming.acp"
+ Configurations {
+  AudioProjectResourceClass PC {}
+  AudioProjectResourceClass XBOX_ONE : PC {}
+  AudioProjectResourceClass PS4 : PC {}
+  AudioProjectResourceClass HEADLESS : PC {}
+ }
+}

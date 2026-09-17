@@ -1,0 +1,376 @@
+AudioClass {
+ sounds {
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 240001
+   name "TFS_IMPACT_STANDARD"
+   version 5
+   tl 600 0
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 240101
+       port 65
+      }
+      ConnectionClass connection {
+       id 240102
+       port 65
+      }
+     }
+    }
+   }
+   volume_dB 0
+   outState 240002
+   outStatePort 8199
+   transformation Entity
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 240003
+   name "TFS_IMPACT_EXTENDED"
+   version 5
+   tl 600 150
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 240101
+       port 65
+      }
+      ConnectionClass connection {
+       id 240102
+       port 65
+      }
+     }
+    }
+   }
+   volume_dB 6
+   outState 240002
+   outStatePort 8199
+   transformation Entity
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 240004
+   name "TFS_IMPACT_EXTREME"
+   version 5
+   tl 600 300
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 240101
+       port 65
+      }
+      ConnectionClass connection {
+       id 240102
+       port 65
+      }
+     }
+    }
+   }
+   volume_dB 12
+   outState 240002
+   outStatePort 8199
+   transformation Entity
+  }
+ }
+ mixers {
+  MixerClass {
+   id 240002
+   name "OutputState"
+   version 4
+   tl 850 0
+   res "{B764D803219C775E}Sounds/FinalMix.afm"
+   ins {
+    ConnectionsClass connections {
+     id 8199
+     links {
+      ConnectionClass connection {
+       id 240001
+       port 65
+      }
+      ConnectionClass connection {
+       id 240003
+       port 65
+      }
+      ConnectionClass connection {
+       id 240004
+       port 65
+      }
+     }
+    }
+   }
+   path "{B764D803219C775E}Sounds/FinalMix.afm"
+   inputs {
+    "WPN_Handling" "WPN_Shots" "WPN_Explosions" "WNP_BulletHits" "CHAR" "ENV_AMB_2D" "VEH_Animations" "Impacts" "Dialog" "Music" "ENV_Doors" "VEH_Engine" "VEH_Tires" "VON" "SFX" "SFX_Reverb_OBSOLETE" "VON_Reverb" "Dialog_Reverb" "Impacts_EXT" "ENV_AMB_3D" "WPN_SonicCracks" "CHAR_Gear" "PA" "SFX_Reverb_Exterior" "UI" "ENV_AMB_3D_Reverb_Exterior" "SFX_Direct" "SFX_Reverb_Small" "SFX_Reverb_Medium" "SFX_Reverb_Large" "WPN_Shots_Player" "Dialog_Reverb_Small" "Dialog_Reverb_Medium" "Dialog_Reverb_Large" "WPN_TravelingProjectile" "Dialog_Delay_Exterior" "SFX_Reverb_InCabin"
+   }
+  }
+ }
+ shaders {
+  ShaderClass {
+   id 240101
+   name "Impact Core Shader"
+   version 5
+   tl 250 -100
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 240301
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 1
+     links {
+      ConnectionClass connection {
+       id 240401
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 2
+     links {
+      ConnectionClass connection {
+       id 240501
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 240601
+       port 65
+      }
+      ConnectionClass connection {
+       id 240602
+       port 65
+      }
+      ConnectionClass connection {
+       id 240603
+       port 65
+      }
+      ConnectionClass connection {
+       id 240604
+       port 65
+      }
+     }
+    }
+   }
+  }
+  ShaderClass {
+   id 240102
+   name "Impact Debris Shader"
+   version 5
+   tl 250 250
+   ins {
+    ConnectionsClass connections {
+     id 0
+     links {
+      ConnectionClass connection {
+       id 240301
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 1
+     links {
+      ConnectionClass connection {
+       id 240402
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 2
+     links {
+      ConnectionClass connection {
+       id 240501
+       port 65
+      }
+     }
+    }
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection {
+       id 240605
+       port 65
+      }
+     }
+    }
+   }
+  }
+ }
+ amplitudes {
+  AmplitudeClass : "{81230935CD90BCBC}Sounds/_SharedData/Configs/Amplitude/Explosions/Amplitude_Explosions_MainAmplitude_LargeExplosion.conf" {
+   id 240401
+   version 5
+   tl 0 -100
+   parent "{81230935CD90BCBC}Sounds/_SharedData/Configs/Amplitude/Explosions/Amplitude_Explosions_MainAmplitude_LargeExplosion.conf"
+   AttenuationCurve {
+    CurvePoint "1" {}
+    CurvePoint "2" {
+     X 80
+     Modifier 0.03
+    }
+    CurvePoint "3" {
+     X 10000
+    }
+   }
+  }
+  AmplitudeClass {
+   id 240402
+   name "Debris Amplitude"
+   version 5
+   tl 0 250
+   curve Custom
+   AttenuationCurve {
+    CurvePoint "1" {
+     Y 1
+    }
+    CurvePoint "2" {
+     X 35
+     Y 0.65
+    }
+    CurvePoint "3" {
+     X 120
+     Y 0.18
+    }
+    CurvePoint "4" {
+     X 300
+    }
+   }
+  }
+ }
+ frequency {
+  FrequencyClass {
+   id 240501
+   name "Impact Frequency"
+   version 5
+   tl 0 50
+   enableDistanceAtt 1
+  }
+ }
+ banks_local {
+  BankLocalClass {
+   id 240601
+   name "Initial Crack"
+   version 7
+   tl -300 -250
+   Volume -8
+   "Volume variance" 0.5
+   "Pitch variance" 0.25
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0010001}Sounds/Artillery/Impact/Initial/Fire_Initial_1.wav"
+    }
+   }
+  }
+  BankLocalClass {
+   id 240602
+   name "Shockwave"
+   version 7
+   tl -300 -100
+   Volume -10
+   "Volume variance" 0.5
+   "Pitch variance" 0.35
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0030001}Sounds/Artillery/Impact/Shockwave/Fire_Shockwave_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0030002}Sounds/Artillery/Impact/Shockwave/Fire_Shockwave_2.wav"
+     Index 1
+    }
+   }
+  }
+  BankLocalClass {
+   id 240603
+   name "Low Boom"
+   version 7
+   tl -300 50
+   Volume -11
+   "Volume variance" 0.75
+   Pitch -1
+   "Pitch variance" 0.5
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0020001}Sounds/Artillery/Impact/LowBoom/Fire_LowBoom_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0020002}Sounds/Artillery/Impact/LowBoom/Fire_LowBoom_2.wav"
+     Index 1
+    }
+   }
+  }
+  BankLocalClass {
+   id 240604
+   name "Impact Tail"
+   version 7
+   tl -300 200
+   Volume -14
+   "Volume variance" 1
+   Pitch -1
+   "Pitch variance" 0.6
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0040001}Sounds/Artillery/Impact/Tail/Fire_Tail_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0040002}Sounds/Artillery/Impact/Tail/Fire_Tail_2.wav"
+     Index 1
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5E0040003}Sounds/Artillery/Impact/Tail/Fire_Tail_3.wav"
+     Index 2
+    }
+   }
+  }
+  BankLocalClass {
+   id 240605
+   name "Falling Debris"
+   version 7
+   tl -300 350
+   Volume -22
+   "Volume variance" 1
+   "Pitch variance" 0.8
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5D0010001}Sounds/Artillery/Debris/Fire_Debris_1.wav"
+    }
+    AudioBankSampleClass Sample {
+     Filename "{6A67F8C5D0010002}Sounds/Artillery/Debris/Fire_Debris_2.wav"
+     Index 1
+    }
+   }
+  }
+ }
+ spatialities {
+  SpatialityClass {
+   id 240301
+   name "Impact Spatiality"
+   version 5
+   tl 0 0
+   spatialFactor 1
+  }
+ }
+ version 1
+ sourcesLimit 4
+}

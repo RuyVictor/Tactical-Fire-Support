@@ -1,0 +1,348 @@
+AudioClass {
+ sounds {
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 250001
+   name "TFS_RADIO_REQUEST_RECEIVED_ENGLISH"
+   version 5
+   tl 500 -240
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection { id 250101 port 65 }
+     }
+    }
+   }
+   outState 250002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 250003
+   name "TFS_RADIO_SHOT_ENGLISH"
+   version 5
+   tl 500 -120
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection { id 250102 port 65 }
+     }
+    }
+   }
+   outState 250002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 250004
+   name "TFS_RADIO_ROUNDS_INCOMING_ENGLISH"
+   version 5
+   tl 500 0
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection { id 250103 port 65 }
+     }
+    }
+   }
+   outState 250002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 250005
+   name "TFS_RADIO_DANGER_CLOSE_ENGLISH"
+   version 5
+   tl 500 120
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection { id 250104 port 65 }
+     }
+    }
+   }
+   outState 250002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 250006
+   name "TFS_RADIO_CLEAR_AREA_ENGLISH"
+   version 5
+   tl 500 240
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection { id 250105 port 65 }
+     }
+    }
+   }
+   outState 250002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+  SoundClass : "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf" {
+   id 250007
+   name "TFS_RADIO_ALERT_TONE_ENGLISH"
+   version 5
+   tl 500 360
+   parent "{33BDB47621D34A76}Sounds/_SharedData/Configs/Sound/Weapons/Sound_Weapons_Explosion.conf"
+   ins {
+    ConnectionsClass connections {
+     id 64
+     links {
+      ConnectionClass connection { id 250106 port 65 }
+     }
+    }
+   }
+   outState 250002
+   outStatePort 8199
+   transformation Entity
+   speedOfSoundSimulation 0
+   DelayTransform 0
+  }
+ }
+ mixers {
+  MixerClass {
+   id 250002
+   name "OutputState"
+   version 4
+   tl 750 0
+   res "{B764D803219C775E}Sounds/FinalMix.afm"
+   ins {
+    ConnectionsClass connections {
+     id 8199
+     links {
+      ConnectionClass connection { id 250001 port 65 }
+      ConnectionClass connection { id 250003 port 65 }
+      ConnectionClass connection { id 250004 port 65 }
+      ConnectionClass connection { id 250005 port 65 }
+      ConnectionClass connection { id 250006 port 65 }
+      ConnectionClass connection { id 250007 port 65 }
+     }
+    }
+   }
+   path "{B764D803219C775E}Sounds/FinalMix.afm"
+   inputs {
+    "WPN_Handling" "WPN_Shots" "WPN_Explosions" "WNP_BulletHits" "CHAR" "ENV_AMB_2D" "VEH_Animations" "Impacts" "Dialog" "Music" "ENV_Doors" "VEH_Engine" "VEH_Tires" "VON" "SFX" "SFX_Reverb_OBSOLETE" "VON_Reverb" "Dialog_Reverb" "Impacts_EXT" "ENV_AMB_3D" "WPN_SonicCracks" "CHAR_Gear" "PA" "SFX_Reverb_Exterior" "UI" "ENV_AMB_3D_Reverb_Exterior" "SFX_Direct" "SFX_Reverb_Small" "SFX_Reverb_Medium" "SFX_Reverb_Large" "WPN_Shots_Player" "Dialog_Reverb_Small" "Dialog_Reverb_Medium" "Dialog_Reverb_Large" "WPN_TravelingProjectile" "Dialog_Delay_Exterior" "SFX_Reverb_InCabin"
+   }
+  }
+ }
+ shaders {
+  ShaderClass {
+   id 250101
+   name "Request Received"
+   version 5
+   tl 200 -240
+   ins {
+    ConnectionsClass connections { id 0 links { ConnectionClass connection { id 250301 port 65 } } }
+    ConnectionsClass connections { id 1 links { ConnectionClass connection { id 250401 port 65 } } }
+    ConnectionsClass connections { id 2 links { ConnectionClass connection { id 250501 port 65 } } }
+    ConnectionsClass connections { id 64 links { ConnectionClass connection { id 250601 port 65 } } }
+   }
+  }
+  ShaderClass {
+   id 250102
+   name "Shot"
+   version 5
+   tl 200 -120
+   ins {
+    ConnectionsClass connections { id 0 links { ConnectionClass connection { id 250301 port 65 } } }
+    ConnectionsClass connections { id 1 links { ConnectionClass connection { id 250401 port 65 } } }
+    ConnectionsClass connections { id 2 links { ConnectionClass connection { id 250501 port 65 } } }
+    ConnectionsClass connections { id 64 links { ConnectionClass connection { id 250602 port 65 } } }
+   }
+  }
+  ShaderClass {
+   id 250103
+   name "Rounds Incoming"
+   version 5
+   tl 200 0
+   ins {
+    ConnectionsClass connections { id 0 links { ConnectionClass connection { id 250301 port 65 } } }
+    ConnectionsClass connections { id 1 links { ConnectionClass connection { id 250401 port 65 } } }
+    ConnectionsClass connections { id 2 links { ConnectionClass connection { id 250501 port 65 } } }
+    ConnectionsClass connections { id 64 links { ConnectionClass connection { id 250603 port 65 } } }
+   }
+  }
+  ShaderClass {
+   id 250104
+   name "Danger Close"
+   version 5
+   tl 200 120
+   ins {
+    ConnectionsClass connections { id 0 links { ConnectionClass connection { id 250301 port 65 } } }
+    ConnectionsClass connections { id 1 links { ConnectionClass connection { id 250401 port 65 } } }
+    ConnectionsClass connections { id 2 links { ConnectionClass connection { id 250501 port 65 } } }
+    ConnectionsClass connections { id 64 links { ConnectionClass connection { id 250605 port 65 } } }
+   }
+  }
+  ShaderClass {
+   id 250105
+   name "Clear Area"
+   version 5
+   tl 200 240
+   ins {
+    ConnectionsClass connections { id 0 links { ConnectionClass connection { id 250301 port 65 } } }
+    ConnectionsClass connections { id 1 links { ConnectionClass connection { id 250401 port 65 } } }
+    ConnectionsClass connections { id 2 links { ConnectionClass connection { id 250501 port 65 } } }
+    ConnectionsClass connections { id 64 links { ConnectionClass connection { id 250606 port 65 } } }
+   }
+  }
+  ShaderClass {
+   id 250106
+   name "Alert Tone"
+   version 5
+   tl 200 360
+   ins {
+    ConnectionsClass connections { id 0 links { ConnectionClass connection { id 250301 port 65 } } }
+    ConnectionsClass connections { id 1 links { ConnectionClass connection { id 250401 port 65 } } }
+    ConnectionsClass connections { id 2 links { ConnectionClass connection { id 250501 port 65 } } }
+    ConnectionsClass connections { id 64 links { ConnectionClass connection { id 250604 port 65 } } }
+   }
+  }
+ }
+ amplitudes {
+  AmplitudeClass {
+   id 250401
+   name "Radio Amplitude"
+   version 5
+   tl -50 0
+   curve Custom
+   AttenuationCurve {
+    CurvePoint "1" { Y 1 }
+    CurvePoint "2" { X 1 Y 1 }
+   }
+  }
+ }
+ frequency {
+  FrequencyClass {
+   id 250501
+   name "Radio Frequency"
+   version 5
+   tl -50 100
+   enableDistanceAtt 0
+  }
+ }
+ banks_local {
+  BankLocalClass {
+   id 250601
+   name "Request Received English"
+   version 7
+   tl -350 -240
+   Volume -2
+   "Volume variance" 0
+   Pitch 0
+   "Pitch variance" 0
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A1010001}Sounds/Radio/Mission/Radio_RequestAccepted_English_1.wav" }
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A1010002}Sounds/Radio/Mission/Radio_RequestAccepted_English_2.wav" Index 1 }
+   }
+  }
+  BankLocalClass {
+   id 250602
+   name "Shot English"
+   version 7
+   tl -350 -120
+   Volume -2
+   "Volume variance" 0
+   Pitch 0
+   "Pitch variance" 0
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A1030001}Sounds/Radio/Mission/Radio_Shot_English_English_1.wav" }
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A1030002}Sounds/Radio/Mission/Radio_Shot_English_English_2.wav" Index 1 }
+   }
+  }
+  BankLocalClass {
+   id 250603
+   name "Rounds Incoming English"
+   version 7
+   tl -350 0
+   Volume -2
+   "Volume variance" 0
+   Pitch 0
+   "Pitch variance" 0
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A1020001}Sounds/Radio/Mission/Radio_RoundsIncoming_English_1.wav" }
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A1020002}Sounds/Radio/Mission/Radio_RoundsIncoming_English_2.wav" Index 1 }
+   }
+  }
+  BankLocalClass {
+   id 250604
+   name "Danger Alert Tone"
+   version 7
+   tl -350 80
+   Volume -4
+   "Volume variance" 0
+   Pitch 0
+   "Pitch variance" 0
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A2010001}Sounds/Radio/Warning/Radio_AlertTone_English_1.wav" }
+   }
+  }
+  BankLocalClass {
+   id 250605
+   name "Danger Close English"
+   version 7
+   tl -350 160
+   Volume -2
+   "Volume variance" 0
+   Pitch 0
+   "Pitch variance" 0
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A2030001}Sounds/Radio/Warning/Radio_DangerClose_English_1.wav" }
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A2030002}Sounds/Radio/Warning/Radio_DangerClose_English_2.wav" Index 1 }
+   }
+  }
+  BankLocalClass {
+   id 250606
+   name "Clear Area English"
+   version 7
+   tl -350 240
+   Volume -2
+   "Volume variance" 0
+   Pitch 0
+   "Pitch variance" 0
+   Resampler FIR_4
+   Samples {
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A2020001}Sounds/Radio/Warning/Radio_ClearArea_English_1.wav" }
+    AudioBankSampleClass Sample { Filename "{6A67F8C5A2020002}Sounds/Radio/Warning/Radio_ClearArea_English_2.wav" Index 1 }
+   }
+  }
+ }
+ spatialities {
+  SpatialityClass {
+   id 250301
+   name "Radio 2D Spatiality"
+   version 5
+   tl -50 -100
+   spatialFactor 0
+  }
+ }
+ version 1
+ sourcesLimit 8
+}
